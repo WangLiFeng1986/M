@@ -1,0 +1,91 @@
+@import "./mixin.less";
+@import "./variables.less";
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-touch-callout: none;
+	// -webkit-overflow-scrolling: touch;
+  font-family: "Roboto", sans-serif;
+}
+
+.page {
+	background: #fff;
+	color: @colorFont;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.container {
+	width: 100%;
+	height: 100%;
+	padding: 30px;
+}
+
+.tc-l {
+	text-align: left;
+}
+
+.tc-c {
+	text-align: center;
+}
+
+.tc-r {
+	text-align: right;
+}
+.fl_l {
+	float: left;
+}
+.fl_r {
+	float: right;
+}
+.flex_r {
+	display: flex;
+	flex-direction: row-reverse;
+}
+.flex_l {
+	display: flex;
+	flex-direction: row;
+}
+.flex_c {
+	display: flex;
+	flex-direction: center;
+}
+.flex_sb {
+	display: flex;
+	flex-direction: space-between;
+}
+
+// 动画
+
+.fade-enter-active,
+.fade-leave-active {
+	transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+	opacity: 0;
+}
+
+.fade-down-enter-active {
+	animation: fadeDown 0.5s;
+}
+.fade-down-leave-active {
+	animation: fadeDown 0.5s reverse;
+	transition-delay: 1s;
+}
+
+@keyframes fadeDown {
+	from {
+		transform: translateY(30px);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.loading {
+  display: block;
+  margin: 20px auto 0;
+  width: 50px;
+}
+

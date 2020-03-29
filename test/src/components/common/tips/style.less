@@ -1,0 +1,55 @@
+.bounce-enter-active {
+	animation: bounce-in 0.2s ease-in;
+}
+.bounce-leave-active {
+	animation: bounce-in 0.2s ease-out reverse;
+}
+@keyframes bounce-in {
+	from {
+    opacity: 0;
+		transform: scale(1.4);
+	}
+	to {
+		transform: scale(1);
+    opacity: 1;
+	}
+}
+.tips {
+	position: fixed;
+	width: 100%;
+	padding: 0 30px;
+	top: 30%;
+	box-sizing: border-box;
+  z-index: 999;
+	.text {
+		background-color: #ffffff;
+		text-align: center;
+		border-radius: 20px;
+		p {
+			font-size: 32px;
+			color: #848484;
+			padding: 64px 30px;
+			line-height: 1.6;
+		}
+		.btn {
+			border-top: 1px solid #b0b0b0;
+			display: flex;
+			justify-content: center;
+			height: 100px;
+			line-height: 100px;
+			span {
+				width: ceil(50% - 1);
+				display: block;
+				font-size: 46px;
+				color: #1779f6;
+				font-family: Adobe;
+				font-weight: 600;
+			}
+			.line {
+				width: 1px;
+				background-color: #b0b0b0;
+				height: 100%;
+			}
+		}
+	}
+}
